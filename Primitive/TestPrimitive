@@ -1,0 +1,12 @@
+public class TestPrimitive{
+	public static void main(Strings args[]){
+		System.out.println("Illustration of float datatype:")
+		float force;
+		float mass = 60.66f;
+		float acceleration =  -9.8;
+		force = mass * acceleration;
+		System.out.println("The mass is:" +mass);
+		System.out.println("The acceleration is:" +acceleration);
+		System.out.println("The force is:" +force);
+	}
+}
