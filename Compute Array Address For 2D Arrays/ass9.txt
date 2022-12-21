@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <fstream>
+using namespace std;
+
+/*void print(const std::string &item)
+{
+    std::cout  << "." <<item << std::endl;
+    
+}*/
+
+int main() {
+    // Empty vector holding all names from file
+    vector<string> vec1;
+
+    // Read names from file LineUp.txt
+    ifstream in("Ast9_data.txt");
+    if(!in.is_open())
+        cout << "Unable to open file\n";
+
+    // this is wrong, by the way: while(in.good()){
+    string word;
+    while(getline(in, word))
+            vec1.push_back(word);
+
+    sort(vec1.begin(), vec1.end());
+
+
+    // Loop to print names
+    for (int i = 0; i <= vec1.size(); i++)
+       std :: cout << vec1[i] << std::endl;
+}
